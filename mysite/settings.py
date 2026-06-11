@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-ij!_58tqm*bj$8@&+z2f$x-oq83#pvw87z0d#w%4c(l_h*!n^%
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['.onrender.com']
+ALLOWED_HOSTS = ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".onrender.com"]
 
 # Application definition
 
@@ -77,14 +77,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bookshop',
-        'USER': 'root',
-        'PASSWORD': 'thaddi04',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bookshop_db_1swq',
+        'USER': 'bookshop_db_1swq_user',
+        'PASSWORD': '2nR3iYPEz7FotnlnwS61f164IHLhSkWp',
+        'HOST': 'dpg-d8lefggjo6nc73c6hb20-a.virginia-postgres.render.com',
+        'PORT': '5432',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
