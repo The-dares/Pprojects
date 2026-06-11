@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/T_M.png' %}" alt="Company Logo">
+    </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/logout/">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <div class="dashboard-header">
+    <u><h1>Dashboard</h1></u>
+<div class="dashboard-grid">
+
+    <div class="card">
+        <img src="{% static 'images/book.jfif' %}" alt="Books" class="card-icon">
+        <h3><a href="{% url 'book_list' %}">My Books</a></h3>
+        <p>Browse available books in the shop.</p>
+    </div>
+
+    <div class="card">
+        <img src="{% static 'images/profile.jfif' %}" alt="Profile" class="card-icon">
+        <h3><a href="{% url 'profile' %}">My Profile</a></h3>
+        <p>View and manage your account information.</p>
+    </div>
+
+</div>
+
+    </div>
+
+     <footer class="footer">
+        <div class="footer-bottom">
+        <p>&copy; 2026 T_M Bookshop E-Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

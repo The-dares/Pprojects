@@ -1,0 +1,483 @@
+/* ==================================================
+   GLOBAL RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   GENERAL PAGE STYLING
+================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    min-height: 100vh;
+    color: #333;
+}
+
+
+/* ==================================================
+   CONTAINERS
+================================================== */
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 80px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ==================================================
+   TYPOGRAPHY
+================================================== */
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: green;
+    font-family:'Cormorant Garamond', serif;;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 5px;
+    color: black;
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   NAVIGATION BAR
+================================================== */
+
+.navbar {
+    text-align: right;
+    padding: 20px;
+    background: white;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: green;
+    text-decoration: underline;
+}
+
+
+/* ==================================================
+   FORMS
+================================================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+
+/* ==================================================
+   LINK BUTTONS
+================================================== */
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    background: maroon;
+    color: white;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: maroon;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: blue;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #0033cc;
+}
+
+
+/* ==================================================
+   DASHBOARD
+================================================== */
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-grid {
+    display: grid;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+
+/* ==================================================
+   BOOKS PAGE
+================================================== */
+
+.books-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.book-card {
+    background: whitesmoke;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;   /* Fixed width */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.book-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.book-card h3 {
+    color: green;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline ;
+}
+.book-card h4{
+    text-align: center;
+    margin-bottom: 5px;
+    color: black;
+    line-height: 1.6;
+}
+.purchase-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #0f6d33; /* WhatsApp green */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.purchase-btn:hover {
+    background: #1ebe5d;
+}
+
+
+
+/* ==================================================
+   PROFILE PAGE
+================================================== */
+
+.profile-card {
+    background: white;
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.profile-card p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width: 600px) {
+
+    .container {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .book-card {
+        margin: 10px;
+    }
+}
+
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 20px 20px 5px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: auto;
+    gap: 110px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 5px;
+}
+
+.footer-section h3 {
+    margin-bottom: 8px;
+    color: #4a9b1f;
+}
+
+.footer-section p,
+.footer-section a {
+    color: #ccc;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 2px;
+}
+
+.footer-bottom p {
+    text-align: center;
+    border-top: 1px solid #333;
+    margin-top: 6px;
+    padding-top: 10px;
+    font-size: 13px;
+    color:white;
+}
+.quick-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Remove this if you never want wrapping */
+}
+
+.image-container {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.navbar {
+    background-color: teal;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    display: block;
+}
+.card {
+    padding: 5px;
+}
+
+.card-icon {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0 auto 5px; /* centers image */
+    object-fit: contain;
+}
+
+.card h3 {
+    text-align: left; /* aligns heading left */
+}
+
+.card p {
+    text-align: center; /* aligns paragraph left */
+}
+
+.card h3 a {
+    text-decoration: none;
+}
+.label {
+   
+    width: 80px;
+    font-weight: bold;
+    color: #222;
+    text-align: left;
+}
+
+.value {
+    color: #666;
+    text-align: left;
+}
+.offer-badge {
+    position: fixed;
+    top: 110px;
+    right: 60px;
+}
+.offer-badge {
+    width: 160px;
+    height: 160px;
+    background: #ff4a3d;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: polygon(
+        50% 0%, 62% 10%, 78% 5%, 85% 20%,
+        100% 25%, 95% 40%, 100% 55%, 85% 60%,
+        78% 75%, 62% 70%, 50% 100%, 38% 70%,
+        22% 75%, 15% 60%, 0% 55%, 5% 40%,
+        0% 25%, 15% 20%, 22% 5%, 38% 10%
+    );
+
+    font-size: 14px;
+    padding: 10px;
+}

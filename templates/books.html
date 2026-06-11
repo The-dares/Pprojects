@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/T_M.png' %}" alt="Company Logo">
+    </div>
+    <div class="nav-links">
+<a href="{% url 'dashboard' %}">Back to Dashboard</a>
+</div>
+    </nav>
+
+<u><h1>Available Books</h1></u>
+
+
+<div class="books-container">
+    {% for book in books %}
+<div class="book-card">
+    
+    <img src="{{ book.image.url }}" width="150">
+
+    <h3>{{ book.title }}</h3>
+<p>
+  <span class="label">Author:</span>
+  <span class="value">{{ book.author }}</span>
+</p>
+
+<p>
+  <span class="label">Publisher:</span>
+  <span class="value">{{ book.publisher }}</span>
+</p>
+
+<p>
+  <span class="label">Year:</span>
+  <span class="value">{{ book.year_published }}</span>
+</p>
+
+<p>
+  <span class="label">Price:</span>
+  <span class="value">KSh {{ book.price }}</span>
+</p>
+<a class="purchase-btn"
+   href="https://wa.me/254794139758?text=I%20want%20to%20buy%20{{ book.title|urlencode }}%20book%20by%20{{ book.author|urlencode }}%20for%20KSh%20{{ book.price }}%20is%20it%20available?%20"
+   target="_blank">
+   Purchase
+</a>
+</div>
+{% endfor %}
+</div>
+<div class="nav-links">
+
+<a href="{% url 'dashboard' %}">Back to Dashboard</a>
+</div>
+<footer class="footer">
+        <div class="footer-bottom">
+        <p>&copy; 2026 T_M Bookshop E-Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>T-M E-BOOKSHOP</title>
+   
+    
+</nav>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+    <div class="logo">
+        <img src="{% static 'images/TM.png' %}" alt="Company Logo">
+    </div>
+
+    <ul class="nav-links">
+       <li><a href="{% url 'register' %}">Register</a></li>
+        
+    </ul>
+</nav>
+<div class="offer-badge">
+    Books on Offer!!<br>
+    🚚 Delivery Available
+</div>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1> T_M Bookshop</h1>
+
+            <p>
+                Visit and browse through a good list
+                of study material kept for your knowlegde upgrade.
+                 </p>
+                
+            <p>We offer tested and approved tech reading materials.</p>
+          <u><b><p>Among offered books </p></b></u>
+           <div class="image-row">
+
+    <div class="image-container">
+        <img src="https://www.image2url.com/r2/default/images/1781006325867-c2305b58-9109-4eca-8ff4-049e65ea99b5.jpg" alt="image" />
+    </div>
+
+    <div class="image-container">
+        <img src="https://www.image2url.com/r2/default/images/1781006456500-17d8eb13-1154-42ea-aed5-6b06bffcee66.jpg" alt="image" />
+    </div>
+
+    <div class="image-container">
+      <img src="https://www.image2url.com/r2/default/images/1781006604684-2a135141-fc39-439e-bfb6-e945a42921c7.jpg" alt="image" />
+    </div>
+
+    <div class="image-container">
+      <img src="https://www.image2url.com/r2/default/images/1781006864563-37c4864f-77bc-4221-9031-66c920a8c80d.jpg" alt="image" />
+    </div>
+
+</div>
+
+            <div class="buttons">
+                <a href="/register/" class="btn btn-primary">
+                    Get Started
+                </a>
+
+                <a href="/login/" class="btn btn-secondary">
+                    Login
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-section">
+            
+            <h3>About Us</h3>
+            <p>
+                We provide quality learning resources and web development tutorials to help you grow your skills.
+            </p>
+            
+        </div>
+
+        <div class="footer-section">
+        
+            <h3>VISION</h3>
+            <p>To empower communities through knowledge by making books accessible, affordable, and convenient for everyone</p>
+           
+        </div>
+
+        <div class="footer-section">
+             
+            <h3>Contact</h3>
+            <p>Email: info@bookshop.com</p>
+            <p>Phone: +254 741 090 678</p>
+            
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
